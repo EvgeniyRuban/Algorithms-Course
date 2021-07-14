@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Algorithms.Lesson_3.DistanceSearchBenchmarks-20210714-165113</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19041.1083 (2004/May2020Update/20H1)
+AMD Ryzen 5 2600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=5.0.201
+  [Host]     : .NET Core 3.1.13 (CoreCLR 4.700.21.11102, CoreFX 4.700.21.11602), X64 RyuJIT  [AttachedDebugger]
+  DefaultJob : .NET Core 3.1.13 (CoreCLR 4.700.21.11102, CoreFX 4.700.21.11602), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>            Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>RefTypeByFloat</td><td>67.49 ns</td><td>1.052 ns</td><td>0.932 ns</td>
+</tr><tr><td>ValueTypeByFloat</td><td>26.96 ns</td><td>0.083 ns</td><td>0.077 ns</td>
+</tr><tr><td>ValueTypeInDouble</td><td>18.04 ns</td><td>0.083 ns</td><td>0.069 ns</td>
+</tr><tr><td>ValueTypeInFloatSqrtless</td><td>24.98 ns</td><td>0.077 ns</td><td>0.068 ns</td>
+</tr></tbody></table>
+</body>
+</html>

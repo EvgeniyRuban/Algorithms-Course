@@ -1,0 +1,12 @@
+// Validating benchmarks:
+Benchmarked method `DistanceSearchValueTypeInFloat` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchValueTypeInFloatSqrtless` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchValueTypeInDouble` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchValueTypeInDoubleSqrtless` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchRefTypeInFloat` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchRefTypeInFloatSqrtless` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchRefTypeInDouble` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Benchmarked method `DistanceSearchRefTypeInDoubleSqrtless` is static. Benchmarks MUST be instance methods, static methods are not supported.
+Assembly Algorithms which defines benchmarks is non-optimized
+Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
+If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
