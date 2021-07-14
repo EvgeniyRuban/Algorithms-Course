@@ -16,10 +16,9 @@ namespace Algorithms.Lesson_3
         //Результаты можно оформить в виде списка или таблицы, в которой наглядно можно будет
         //увидеть время выполнения того или иного метода.
 
-        public static void Main(string[] args)
-        {
-            BenchmarkRunner.Run<DistanceSearchBenchmarks>();
-
-        }
+        //public static void Main(string[] args)
+        //{
+        //    BenchmarkRunner.Run<DistanceSearchBenchmarks>();
+        //}
     }
 }
