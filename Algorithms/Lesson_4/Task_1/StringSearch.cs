@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithms.Lesson_4
+namespace Algorithms.Lesson_4.Task_1
 {
     static class StringSearch
     {

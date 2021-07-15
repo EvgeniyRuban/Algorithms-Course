@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BenchmarkDotNet.Attributes;
 
-namespace Algorithms.Lesson_4
+namespace Algorithms.Lesson_4.Task_1
 {
     public class StringSearchBenchmarks
     {
