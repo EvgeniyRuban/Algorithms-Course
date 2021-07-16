@@ -1,9 +1,7 @@
 ﻿using System;
-using BenchmarkDotNet.Running;
-using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithms.Lesson_4
+namespace Algorithms.Lesson_4.Task_2
 {
     class Program
     {
@@ -12,14 +10,24 @@ namespace Algorithms.Lesson_4
         // Дерево должно быть сбалансированным(это требование не обязательно).
         // Также напишите метод вывода в консоль дерева, чтобы увидеть, насколько корректно работает ваша реализация.
 
-        private static BinaryTree _tree;
+        private static BinaryTree _bTree;
 
-        //static void Main(string[] args)
-        //{
-        //    _tree = new BinaryTree(10, 1, 11, 5, 6);
-        //    _tree.Print();
-        //    Console.WriteLine($"TreeHeight: {_tree.Height}");
-        //    Console.WriteLine($"TreeWidth: {_tree.Width}");
-        //}
+        static void Main(string[] args)
+        {
+            Initialize();
+
+            while (_bTree.Root != null)
+            {
+                _bTree.PrintTree();
+                _bTree.RemoveItem(Int32.Parse(Console.ReadLine()));
+                Console.Clear();
+            }
+        }
+        static void Initialize()
+        {
+            Random rnd = new Random();
+            _bTree = new BinaryTree(50);
+            for (int i = 0; i < 10; i++) _bTree.AddItem(rnd.Next(_bTree.Root.Value * 2));
+        }
     }
 }
