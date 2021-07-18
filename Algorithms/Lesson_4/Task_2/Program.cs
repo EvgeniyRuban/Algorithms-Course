@@ -14,20 +14,36 @@ namespace Algorithms.Lesson_4.Task_2
 
         static void Main(string[] args)
         {
-            Initialize();
+            _bTree = new BinaryTree(50);
 
-            while (_bTree.Root != null)
-            {
-                _bTree.PrintTree();
-                _bTree.RemoveItem(Int32.Parse(Console.ReadLine()));
-                Console.Clear();
-            }
+            TestMethodAddItem();
+            Console.WriteLine("================================");
+            TestMethodRemoveItem();
         }
-        static void Initialize()
+        private static void TestMethodAddItem()
         {
             Random rnd = new Random();
-            _bTree = new BinaryTree(50);
-            for (int i = 0; i < 10; i++) _bTree.AddItem(rnd.Next(_bTree.Root.Value * 2));
+
+            for (int i = 0; i < 5; i++)
+            {
+                int value = rnd.Next(_bTree.Root.Value * 2);
+                Console.WriteLine($"AddItem({value})");
+                _bTree.AddItem(value);
+                _bTree.PrintTree();
+                Console.WriteLine();
+            }
+        }
+        private static void TestMethodRemoveItem()
+        {
+            Node<int>[] array = _bTree.GetTree();
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                if (array[i] == null) continue;
+                Console.WriteLine($"RemoveItem({array[i].Value})");
+                _bTree.RemoveItem(array[i].Value);
+                _bTree.PrintTree();
+                Console.WriteLine();
+            }
         }
     }
 }

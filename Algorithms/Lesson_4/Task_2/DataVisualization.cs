@@ -5,21 +5,30 @@ namespace Algorithms.Lesson_4
 {
     public static class DataVisualization
     {
-        public static void PrintBinaryTree(Node<int> root, int depth, int width)
+        public static void PrintBinaryTree<T>(Node<T>[] array , int depth)
         {
-            PrintByLevelOrder(root);
-            Console.WriteLine();
+            int currentPosition = 0;// Кол-во выведенных в консоль элементов.
+            for (int level=1; level <= depth; level++)
+            {
+                int iterationCount = (int)Math.Pow(2, level - 1) + currentPosition;// Кол-во элементов на каждом уровне дерева.
+                for (; currentPosition < iterationCount; currentPosition++)
+                {
+                    if (array[currentPosition] != null) Console.Write($"({array[currentPosition].Value})");
+                    else Console.Write("(-)");
+                }
+                Console.WriteLine();
+            }
         }
-        private static void PrintByLevelOrder(Node<int> node)
+        private static void PrintByLevelOrder<T>(Node<T> node)
         {
             if (node == null) return;
                 
-            Queue<Node<int>> queue = new Queue<Node<int>>();
+            Queue<Node<T>> queue = new Queue<Node<T>>();
             queue.Enqueue(node);
 
             do
             {
-                Node<int> currentNode = queue.Dequeue();
+                Node<T> currentNode = queue.Dequeue();
                 Console.Write($"({currentNode.Value})");
                 if (currentNode.Left != null) queue.Enqueue(currentNode.Left);
                 else Console.Write("()");

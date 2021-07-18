@@ -8,6 +8,7 @@ namespace Algorithms.Lesson_4
         public Node<T> Parent { get; set; }
         public Node<T> Left { get; set; }
         public Node<T> Right { get; set; }
+        public bool Leaf => Left == null && Right == null ? true : false;
 
         public Node(T value)
         {
