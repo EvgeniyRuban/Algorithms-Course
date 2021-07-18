@@ -12,14 +12,10 @@ namespace Algorithms.Lesson_4.Task_2
 
         private static BinaryTree _bTree;
 
-        static void Main(string[] args)
-        {
-            _bTree = new BinaryTree(50);
-
-            TestMethodAddItem();
-            Console.WriteLine("================================");
-            TestMethodRemoveItem();
-        }
+        //static void Main(string[] args)
+        //{
+            
+        //}
         private static void TestMethodAddItem()
         {
             Random rnd = new Random();
